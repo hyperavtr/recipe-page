@@ -73,7 +73,7 @@ main {
 }
 
 /*introduction area -> preparation time area*/
-#preparation-time {
+#preparation-time-note {
 	border-radius: 13px;
 	background-color: var(--rose-white-color);
 	padding: 3px;
@@ -84,7 +84,7 @@ main {
 	justify-content: center;
 }
 
-#preparation-time>* {
+#preparation-time-note>* {
 	margin-top: 30px;
 	margin-left: 5px;
 }
@@ -96,16 +96,16 @@ main {
 	font-size: 1.3rem;
 }
 
-#preparation-time .list {
+#preparation-time-note .list {
 	margin-top: 0px;
 }
 
-#preparation-time .list li::marker {
+#preparation-time-note .list li::marker {
 	color: var(--dark-raspberry-color);
 }
 
 /*common sections tweaks*/
-#ingredients:not(#preparation-time),
+#ingredients:not(#preparation-time-note),
 #instructions,
 #nutrition {
 	width: 90%;
@@ -119,8 +119,8 @@ main {
 	border-bottom: 1px ridge var(--light-grey-color);
 }
 
-/*the section's content*/
-/*the section's content -> headers*/
+/*sectional content*/
+/*sectional content -> headers*/
 .header,
 #main-header {
 	font-family: YoungSerif;
@@ -140,8 +140,8 @@ main {
 	color: var(--nutmeg-color);
 }
 
-/*the section's content -> lists*/
-#ingredients .list:not(#preparation-time>.list) {
+/*sectional content -> lists*/
+#ingredients .list:not(#preparation-time-note>.list) {
 	padding-left: 14px;
 }
 
@@ -150,18 +150,22 @@ main {
 }
 
 li {
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
+	padding: 0 15px 15px 15px;
 }
 
-li::marker {
+#ingredients .list li::marker {
 	color: var(--nutmeg-color);
+	font-weight: 500;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 700
 }
 
-/*the section's content -> table*/
+#instructions .list li::marker {
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	color: var(--nutmeg-color);
+}
+
+/*sectional content -> table*/
 #nutrition-table {
 	border-collapse: collapse;
 	width: 100%;
@@ -189,7 +193,7 @@ th[scope="row"] {
 	font-weight: 700;
 }
 
-/*the section's content -> descriptions*/
+/*sectional content -> descriptions*/
 .description {
 	line-height: 1.5rem;
 }
@@ -198,7 +202,7 @@ th[scope="row"] {
 	margin-bottom: 10px;
 }
 
-/*resolution adapt*/
+/*mobile or tablet resolution adaptation*/
 @media only screen and (max-width:752px) {
 	body {
 		padding: 0px;
@@ -233,9 +237,5 @@ th[scope="row"] {
 
 	.omlette-visibility-low-res {
 		display: block;
-	}
-
-	.description {
-		line-height: 1.5rem;
 	}
 }
