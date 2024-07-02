@@ -155,13 +155,12 @@ li {
 
 #ingredients .list li::marker {
 	color: var(--nutmeg-color);
-	font-weight: 500;
-	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-family: sans-serif;
 }
 
 #instructions .list li::marker {
 	font-weight: 700;
-	font-family: 'Open Sans', sans-serif;
 	color: var(--nutmeg-color);
 }
 
