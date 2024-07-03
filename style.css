@@ -104,7 +104,7 @@ main {
 	color: var(--dark-raspberry-color);
 }
 
-/*common sections tweaks*/
+/*common section tweaks*/
 #ingredients:not(#preparation-time-note),
 #instructions,
 #nutrition {
@@ -169,6 +169,10 @@ li {
 	border-collapse: collapse;
 	width: 100%;
 	margin-bottom: 25px;
+}
+
+#nutrition-table-caption {
+	text-align: left;
 }
 
 tr {
