@@ -84,21 +84,21 @@ main {
 	justify-content: center;
 }
 
-#preparation-time-note>* {
-	margin-top: 30px;
-	margin-left: 5px;
-}
-
-#preparation-time-header {
-	margin-left: 20px;
+#preparation-time-note .list[title]::before {
+	content: attr(title);
+	display: block;
 	color: var(--dark-raspberry-color);
 	font-weight: 600;
 	font-size: 1.3rem;
+	margin-bottom: 15px;
+	margin-left: -18px;
 }
 
 #preparation-time-note .list {
-	margin-top: 0px;
+	margin-top: 20px;
+	margin-bottom: 8px;
 }
+
 
 #preparation-time-note .list li::marker {
 	color: var(--dark-raspberry-color);
@@ -120,33 +120,46 @@ main {
 }
 
 /*sectional content*/
-/*sectional content -> headers*/
-.header,
+/*sectional content -> header/titles*/
 #main-header {
+	color: var(--dark-charcoal);
+	font-size: 2.2rem;
+	font-weight: 400;
 	font-family: YoungSerif;
 	margin-bottom: 0;
 }
 
-#main-header {
-	color: var(--dark-charcoal);
-	font-weight: 400;
-	font-size: 2.2rem;
-}
-
-.header {
+.list[title]:not(#preparation-time-note .list):before,
+#nutrition-table-caption[title]::before {
+	content: attr(title);
 	margin-top: 25px;
 	font-size: 1.8rem;
+	font-family: YoungSerif;
 	font-weight: 400;
 	color: var(--nutmeg-color);
 }
 
+#ingredients .list:not(#preparation-time-note>.list)::before {
+	margin-left: -0.6em;
+	margin-bottom: 0.6em;
+	display: block;
+}
+
+#instructions .list[title]::before {
+	margin-left: -0.8em;
+	margin-bottom: 0.6em;
+	display: block;
+}
+
 /*sectional content -> lists*/
 #ingredients .list:not(#preparation-time-note>.list) {
-	padding-left: 14px;
+	padding-left: 16px;
+	margin-top: 0;
 }
 
 #instructions .list {
-	padding-left: 20px;
+	padding-left: 22px;
+	margin-top: 0;
 }
 
 li {
@@ -172,6 +185,7 @@ li {
 }
 
 #nutrition-table-caption {
+	margin-top: 22px;
 	text-align: left;
 }
 
