@@ -58,21 +58,14 @@ main {
 
 }
 
-/*introduction area*/
-#introduction-area {
-	margin: 5.1% 0 0 0;
-}
-
-#introduction-area>*:not(.omlette-img) {
-	width: 99%;
-}
 
 .omlette-img {
 	width: 100%;
 	border-radius: 13px;
+	margin-bottom: 1.7rem;
 }
 
-/*introduction area -> preparation time area*/
+/*preparation time area*/
 #preparation-time-note {
 	border-radius: 13px;
 	background-color: var(--rose-white-color);
@@ -114,6 +107,10 @@ main {
 	align-items: start;
 }
 
+#ingredients {
+	margin-top: 2.1rem;
+}
+
 #ingredients,
 #instructions {
 	border-bottom: 1px ridge var(--light-grey-color);
@@ -127,6 +124,7 @@ main {
 	font-weight: 400;
 	font-family: YoungSerif;
 	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .list[title]:not(#preparation-time-note .list):before,
@@ -234,7 +232,6 @@ th[scope="row"] {
 
 	#main-header {
 		line-height: 2.2rem;
-		margin-top: 35px;
 	}
 
 	#introduction-area {
@@ -246,6 +243,7 @@ th[scope="row"] {
 		width: 100dvw;
 		border-radius: 0;
 		margin-top: -8px;
+		margin-bottom: 0;
 	}
 
 	.omlette-visibility-high-res {
